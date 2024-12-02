@@ -83,11 +83,10 @@ INSERT INTO genre(genre_name)
     VALUES('Drama');
 
 -- insert movie records 
-	INSERT INTO film(film_name, film_releaseDate, film_runtime, film_director, studio_id, genre_id) 
+INSERT INTO film(film_name, film_releaseDate, film_runtime, film_director, studio_id, genre_id) 
     VALUES('Gladiator', '2000', '155', 'Ridley Scott', (SELECT studio_id FROM studio WHERE studio_name = 'Universal Pictures'),(SELECT genre_id FROM genre WHERE genre_name = 'Drama') );
 INSERT INTO film(film_name, film_releaseDate, film_runtime, film_director, studio_id, genre_id) 
     VALUES('Alien', '1979', '117', 'Ridley Scott', (SELECT studio_id FROM studio WHERE studio_name = '20th Century Fox'),(SELECT genre_id FROM genre WHERE genre_name = 'SciFi') );
-
 INSERT INTO film(film_name, film_releaseDate, film_runtime, film_director, studio_id, genre_id) 
     VALUES('Get Out', '2017', '104', 'Jordan Peele', (SELECT studio_id FROM studio WHERE studio_name = 'Blumhouse Productions'),(SELECT genre_id FROM genre WHERE genre_name = 'Horror') );
-    
+
